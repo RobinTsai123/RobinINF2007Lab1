@@ -56,7 +56,7 @@ fun MainScreen() {
                 Button(
                     onClick = {
                         if (username.isNotBlank()) {
-                            showGreeting = true // Ensure greeting shows
+                            showGreeting = true
                         }
                     },
                     modifier = Modifier
@@ -68,7 +68,7 @@ fun MainScreen() {
 
                 if (showGreeting) {
                     Greeting(
-                        name = username, // Pass updated username
+                        name = username,
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(top = 16.dp)
@@ -83,7 +83,7 @@ fun MainScreen() {
 fun UserInput(name: String, onNameChange: (String) -> Unit, modifier: Modifier = Modifier) {
     TextField(
         value = name,
-        onValueChange = { onNameChange(it) }, // Updates username dynamically
+        onValueChange = { onNameChange(it) },
         label = { Text("Enter your Name") },
         modifier = modifier
             .fillMaxWidth()
@@ -94,10 +94,10 @@ fun UserInput(name: String, onNameChange: (String) -> Unit, modifier: Modifier =
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name! Welcome to INF2007!", // Correct message format
+        text = "Hello $name! Welcome to INF2007!",
         modifier = modifier
             .fillMaxWidth()
-            .testTag("greetingMsg") // Ensure test tag matches
+            .testTag("greetingMsg")
     )
 }
 
