@@ -48,7 +48,7 @@ class lab01test {
         // Verify the greeting message is displayed with the correct text
         composeTestRule.onNodeWithTag("greetingMsg")
             .assertIsDisplayed()
-            .assertTextEquals("Hello John!, Welcome to INF2007!")
+            .assertTextEquals("Hello John! Welcome to INF2007!") // Fixed text
     }
 
     @Test
@@ -79,7 +79,7 @@ class lab01test {
 
         // Verify the greeting for "Alice"
         composeTestRule.onNodeWithTag("greetingMsg")
-            .assertTextEquals("Hello Alice!, Welcome to INF2007!")
+            .assertTextEquals("Hello Alice! Welcome to INF2007!") // Fixed text
 
         // Enter a new name and click Submit
         composeTestRule.onNodeWithTag("nameInput")
@@ -91,6 +91,6 @@ class lab01test {
 
         // Verify the greeting for "Bob"
         composeTestRule.onNodeWithTag("greetingMsg")
-            .assertTextEquals("Hello Bob!, Welcome to INF2007!")
+            .assertTextEquals("Hello Bob! Welcome to INF2007!") // Fixed text
     }
 }
